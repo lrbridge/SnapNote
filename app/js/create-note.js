@@ -4,11 +4,10 @@ angular.module('snapnote').controller('CreateNoteCtrl',
     function($scope) {
 
         $scope.options = [
-            {text: "a"},
-            {text: "ab"},
-            {text: "abc"}
+            {text: "Textbox"},
+            {text: "Something else"},
+            {text: "Something else else"}
         ];
         
-        $( ".draggable" ).draggable({ revert: true, helper: "clone" });
     });
 	

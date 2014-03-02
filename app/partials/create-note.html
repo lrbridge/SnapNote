@@ -1,12 +1,16 @@
 <div class="row">
-<div droppable id="droppable-area" class="well col-lg-8 drophere">
-      <p>Drop here</p>
+<div id="droppable-area" class="well col-lg-8 drophere">
+    <div droppable class="col-lg-2 green bootstrap-grid"></div>
+    <div droppable class="col-lg-2 blue bootstrap-grid"></div>
+    <div droppable class="col-lg-2 green bootstrap-grid"></div>
+    <div droppable class="col-lg-2 blue bootstrap-grid"></div>
+    <div droppable class="col-lg-2 green bootstrap-grid"></div>
+    <div droppable class="col-lg-2 blue bootstrap-grid"></div>
 </div>
 <div class="panel panel-default col-lg-4">
     <div class="panel-heading">Note Options</div>
       <div class="panel-body" ng-repeat="option in options">
-          <p>{{option.text}}</p>
-          <textbox draggable></textbox>
+          <p draggable>{{option.text}}</p>
       </div>
     </div>
 </div>

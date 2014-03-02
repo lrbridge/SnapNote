@@ -6,5 +6,19 @@
 
 
 .drophere {
-    min-height: 200px;
+    min-height: 100px;
+}
+
+.green {
+    border:2px solid green;
+    min-height: 100px;
+}
+
+.blue {
+    border:2px solid blue;
+    min-height: 100px;
+}
+
+.hover {
+    background-color:yellow;   
 }
