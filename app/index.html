@@ -3,16 +3,65 @@
 <head>
     <meta charset="utf-8">
     <title>SnapNote</title>
-    <link rel="stylesheet" type="text/css" href="css/bootswatch.yeti.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="app">
 
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">SnapNote</a>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">DeckList</a></li>
+                <li><a href="#/login">Login</a></li>
+                <li><a href="#/createNote">CreateNote</a></li>
+            </ul>
+        </div>
+                <!--div class="navbar-collapse collapse navbar-responsive-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Active</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Dropdown header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="navbar-form navbar-left">
+                    <input type="text" class="form-control col-lg-8" placeholder="Search">
+                  </form>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+    
     <ng-view></ng-view>
 
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular/angular-route.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/choose-image.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/create-note.js"></script>
     <script src="js/deck-list.js"></script>
 </body>
 </html>

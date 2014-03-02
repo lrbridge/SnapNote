@@ -1,0 +1,18 @@
+<div class="row">
+<div id="draggable-area" class="well col-lg-8">
+    <div id="draggable" class="ui-widget-content col-lg-2 dragme">
+        <p>Drag me around</p>
+        <input class="form-control input-lg" type="text" id="inputLarge">
+    </div>
+</div>
+<div class="panel panel-default col-lg-4">
+    <div class="panel-heading">Note Options</div>
+      <div class="panel-body" ng-repeat="option in options">
+      </div>
+    </div>
+</div>
+ <script>
+  $(function() {
+    $( "#draggable" ).draggable();
+  });
+  </script>

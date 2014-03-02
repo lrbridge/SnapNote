@@ -16,10 +16,15 @@ snapnote.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/deck-list.html', 
         controller: 'DeckListCtrl'
     })
-    .when('/chooseImage', 
+    .when('/login', 
     {
-        templateUrl: 'partials/choose-image.html', 
-        controller: 'ChooseImageCtrl'
+        templateUrl: 'partials/login.html', 
+        controller: 'LoginCtrl'
+    })
+    .when('/createNote', 
+    {
+        templateUrl: 'partials/create-note.html', 
+        controller: 'CreateNoteCtrl'
     })
     .otherwise(
     {

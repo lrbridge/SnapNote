@@ -1,17 +1,13 @@
 <div id="deck-list-view">
 
-    <!-- Navbar with searchbox and back button -->
-    <div class="navbar navbar-default navbar-fixed-top">
-        <!-- App Title -->
-        <a class="navbar-brand">SnapNote</a>
+    <div class="jumbotron">
+        <h1>SnapNote</h1>
+        <p>Studying is a snap!</p>
     </div>
-
     <!-- Content shown when not searching for decks -->
-    <div id="main-content">
+    <!--div>
         <h1>My Decks</h1>
-        <!-- List of Notecard Decks Owned by User -->
-        <div id="deck-list" class="list-group">
-            <!-- Decks created by user -->
+        <div id="deck-list">
             <h3 id="created">Created</h3>
             <div ng-repeat="deck in decks  | filter: { 'owned': 'true', 'created': 'true', 'deleted' : 'false' } | orderBy:'name'">
                 <div>
@@ -21,7 +17,6 @@
                     </a>
                 </div>
             </div>
-            <!-- Decks downloaded by user -->
             <h3 id="downloaded">Downloaded</h3>
             <div ng-repeat="deck in decks  | filter: { 'owned': 'true', 'created': 'false', 'deleted' : 'false' } | orderBy:'name'">
                 <a href="#/{{ deck.id }}/study" class="list-group-item">
@@ -31,8 +26,7 @@
             </div>
         </div>
 
-        <!-- New Note Button -->
         <a type="button" href="#/chooseImage" class="btn btn-lg btn-primary btn-block">New Note</a>
 
-    </div>
+    </div-->
 </div>
