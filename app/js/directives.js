@@ -27,15 +27,21 @@ angular.module('snapnote')
     });
 
 angular.module('snapnote')
-    .directive('droppable', function() {        
+    .directive('droppable', function($compile) {        
         return {
             restrict: 'A',
-            link: function(scope, elm) {
-                elm.droppable({
+            link: function($scope, $element) {
+                $element.droppable({
                     hoverClass: "hover",
                     drop: function( event, ui ) {
                         console.log(ui.draggable);
-                        $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+                        
+                        var dragged = angular.element(ui.draggable).parent();
+                        var dropped = angular.element(this);
+                        //var el = $compile(
+                        var el = $compile( "<textbox></textbox>" )( $scope );
+                        $element.append( el );
+//                        $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
                     }
                 });
             }
