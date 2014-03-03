@@ -36,12 +36,15 @@ angular.module('snapnote')
                     drop: function( event, ui ) {
                         console.log(ui.draggable);
                         
-                        var dragged = angular.element(ui.draggable).parent();
-                        var dropped = angular.element(this);
-                        //var el = $compile(
-                        var el = $compile( "<textbox></textbox>" )( $scope );
+                        var stuff = $scope.getStuff(ui.draggable.text());
+                        console.log(stuff);
+                        var el = $compile( stuff )( $scope );
+
                         $element.append( el );
-//                        $( "<li></li>" ).text( ui.draggable.text() ).appendTo( this );
+//                        var dragged = angular.element(ui.draggable).parent();
+//                        var dropped = angular.element(this);
+//                        var el = $compile( "<textbox></textbox>" )( $scope );
+//                        $element.append( el );
                     }
                 });
             }

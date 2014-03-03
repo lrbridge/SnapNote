@@ -32,6 +32,38 @@ snapnote.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
+snapnote.factory('NoteElements', function() {
+  
+    var options = [
+            {
+                text: "Textbox",
+                content: "<textbox></textbox>"
+            },
+            {
+                text: "Textbox",
+                content: "<textbox></textbox>"
+            },
+            {
+                text: "Textbox",
+                content: "<textbox></textbox>"
+            }
+        ];
+    
+    return {
+		getElements: function() {
+			return options;
+		},
+        getElement: function(text) {
+            for(var x in options) {
+                var option = options[x];
+                if(option.text == text) {
+                    return option.content;
+                }
+            }
+            return "<p>No element matched</p>";
+        }
+	}
+});
 
 snapnote.factory('SampleDecks', function() {
 	

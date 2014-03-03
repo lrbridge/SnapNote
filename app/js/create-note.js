@@ -1,22 +1,15 @@
 'use strict';
 
 angular.module('snapnote').controller('CreateNoteCtrl',
-    function($scope) {
+    function($scope, NoteElements) {
 
-        $scope.options = [
-            {
-                text: "Textbox",
-               // content: textbox
-            },
-            {
-                text: "Textbox",
-              //  content: textbox
-            },
-            {
-                text: "Textbox",
-               // content: textbox
-            }
-        ];
+        $scope.options = NoteElements.getElements();
         
+        $scope.getStuff = function(elemText) {
+            console.log("sweet");
+            console.log(elemText);
+            return NoteElements.getElement(elemText);
+        }
+            
     });
 	
